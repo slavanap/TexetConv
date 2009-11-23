@@ -1,0 +1,49 @@
+subfont-text-scale=3
+priority=idle
+
+[texet]
+profile-desc="Video for T-809 player"
+noodml=yes
+of=avi=yes
+ofps=20
+vf-add=scale=320:-2
+vf-add=expand=320:240:-1:-1:1
+srate=44100
+ovc=xvid=yes
+oac=lavc=yes
+xvidencopts=bitrate=550:max_bframes=0:quant_type=h263:me_quality=4
+lavcopts=acodec=mp2:abitrate=128
+channels=2
+bps=yes
+spuaa=4
+
+[slow]
+profile-desc="For slow computers"
+noodml=yes
+of=avi=yes
+ofps=20
+vf-add=scale=640:-2
+vf-add=expand=640:480:-1:-1:1
+ovc=xvid=yes
+oac=pcm=yes
+xvidencopts=bitrate=1100:max_bframes=0:quant_type=h263:me_quality=4
+channels=2
+bps=yes
+spuaa=4
+
+[utf]
+profile-desc="UTF-8 subtitles"
+utf8=yes
+
+[rus]
+profile-desc="Russian subtitles"
+subcp=cp1251
+
+[double]
+profile-desc="Copy video & audio with max. bitrate"
+vf-add=scale=1024:-2
+vf-add=expand=1024:-2:-1:-1:1
+of=avi=yes
+ovc=lavc=yes
+oac=pcm=yes
+lavcopts=vcodec=mpeg4:vbitrate=10000

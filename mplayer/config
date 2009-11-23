@@ -1,0 +1,53 @@
+#quiet=yes
+framedrop=yes
+dvd-device=f:
+
+#cache=10240
+
+## Uncomment this for AC-3 passthrough.
+#afm=hwac3
+
+## You can use the DirectX or OpenGL video output, default is directx.
+#vo=gl2
+#vo=directx
+
+## video filtering and postprocessing
+## eq is useful if your video card does not support video overlay.
+#vf=dsize=1024:-2
+#vf=pp,eq
+#vf=eq,pp=lb/hb/vb
+
+
+priority=high
+
+## Субтитры ...
+
+subfont-text-scale=3
+spuaa=4
+#embeddedfonts=yes
+#overlapsub=yes
+
+[ass]
+profile-desc="Use font styles"
+ass=yes
+ass-use-margins=yes
+ffactor=0
+
+[utf]
+profile-desc="UTF-8 subtitles"
+utf8=yes
+
+[rus]
+profile-desc="Russian subtitles"
+subcp=cp1251
+
+[opengl]
+profile-desc="OpenGL fast output"
+vo=gl:aspect:yuv=4
+
+[fast]
+profile-desc="Fast decompression"
+lavdopts=skiploopfilter=all:fast=yes#:skipidct=all#:skipframes=noref
+
+[default]
+#profile=rus#,opengl#ass,utf
