@@ -1,10 +1,14 @@
 object Form1: TForm1
-  Left = 192
-  Top = 110
-  Width = 530
-  Height = 483
-  Caption = #1050#1086#1085#1074#1077#1088#1090#1077#1088' '#1074#1080#1076#1077#1086' teXet '#1076#1083#1103' '#1087#1083#1077#1077#1088#1086#1074' T-66x'
+  Left = 256
+  Top = 122
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = #1050#1086#1085#1074#1077#1088#1090#1077#1088' '#1074#1080#1076#1077#1086' teXet v 2.0 '#1076#1083#1103' '#1087#1083#1077#1077#1088#1086#1074' T-56x T-59x '#1080' T-66x'
+  ClientHeight = 449
+  ClientWidth = 522
   Color = clBtnFace
+  Constraints.MaxHeight = 483
+  Constraints.MaxWidth = 530
   Constraints.MinHeight = 483
   Constraints.MinWidth = 530
   Font.Charset = DEFAULT_CHARSET
@@ -18,18 +22,14 @@ object Form1: TForm1
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  DesignSize = (
-    522
-    449)
   PixelsPerInch = 96
   TextHeight = 13
   object btAdd: TSpeedButton
-    Left = 488
+    Left = 8
     Top = 16
     Width = 23
     Height = 22
     Action = acAdd
-    Anchors = [akTop, akRight]
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000000000000000000000000000000000000FF00FF00FF00
@@ -67,12 +67,11 @@ object Form1: TForm1
       FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
   end
   object btDouble: TSpeedButton
-    Left = 488
+    Left = 8
     Top = 40
     Width = 23
     Height = 22
     Action = acDouble
-    Anchors = [akTop, akRight]
     Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
@@ -111,12 +110,11 @@ object Form1: TForm1
       4D00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
   end
   object btDelete: TSpeedButton
-    Left = 488
+    Left = 8
     Top = 64
     Width = 23
     Height = 22
     Action = acDelete
-    Anchors = [akTop, akRight]
     Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
@@ -155,12 +153,12 @@ object Form1: TForm1
       FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
   end
   object btRun: TSpeedButton
-    Left = 440
+    Left = 8
     Top = 240
     Width = 23
     Height = 22
+    Hint = #1047#1072#1087#1091#1089#1090#1080#1090#1100
     Action = acStart
-    Anchors = [akRight, akBottom]
     Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
@@ -199,12 +197,12 @@ object Form1: TForm1
       FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
   end
   object btPause: TSpeedButton
-    Left = 464
+    Left = 32
     Top = 240
     Width = 23
     Height = 22
+    Hint = #1055#1088#1080#1086#1089#1090#1072#1085#1086#1074#1080#1090#1100
     Action = acPause
-    Anchors = [akRight, akBottom]
     Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
@@ -243,12 +241,11 @@ object Form1: TForm1
       FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
   end
   object btStop: TSpeedButton
-    Left = 488
+    Left = 56
     Top = 240
     Width = 23
     Height = 22
     Action = acStop
-    Anchors = [akRight, akBottom]
     Flat = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
@@ -287,19 +284,17 @@ object Form1: TForm1
       FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
   end
   object lbTimeLeft: TLabel
-    Left = 8
+    Left = 88
     Top = 264
     Width = 3
     Height = 13
-    Anchors = [akLeft, akBottom]
   end
   object lbProgress: TLabel
-    Left = 392
+    Left = 472
     Top = 264
     Width = 41
     Height = 13
     Alignment = taRightJustify
-    Anchors = [akRight, akBottom]
     AutoSize = False
     Caption = '0 %'
   end
@@ -308,12 +303,8 @@ object Form1: TForm1
     Top = 288
     Width = 505
     Height = 121
-    Anchors = [akLeft, akRight, akBottom]
     Caption = ' '#1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1082#1086#1085#1074#1077#1088#1090#1072#1094#1080#1080' '
     TabOrder = 0
-    DesignSize = (
-      505
-      121)
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -356,7 +347,6 @@ object Form1: TForm1
       Width = 23
       Height = 22
       Action = acSelectSource
-      Anchors = [akTop, akRight]
       Flat = True
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
@@ -400,7 +390,6 @@ object Form1: TForm1
       Width = 23
       Height = 22
       Action = acSelectSourceDisk
-      Anchors = [akTop, akRight]
       Flat = True
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
@@ -444,7 +433,6 @@ object Form1: TForm1
       Width = 23
       Height = 22
       Action = acSelectDest
-      Anchors = [akTop, akRight]
       Flat = True
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
@@ -487,8 +475,8 @@ object Form1: TForm1
       Top = 40
       Width = 23
       Height = 22
+      Hint = #1055#1088#1077#1076#1087#1088#1086#1089#1084#1086#1090#1088' '#1088#1077#1079#1091#1083#1100#1090#1072#1090#1072
       Action = acPlaySource
-      Anchors = [akTop, akRight]
       Flat = True
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
@@ -541,7 +529,7 @@ object Form1: TForm1
       Top = 16
       Width = 353
       Height = 21
-      Anchors = [akLeft, akTop, akRight]
+      Hint = #1048#1084#1103' '#1082#1086#1085#1074#1077#1088#1090#1080#1088#1091#1077#1084#1086#1075#1086' '#1092#1072#1081#1083#1072' '#1080#1083#1080' '#1087#1072#1087#1082#1080' '#1089' '#1092#1072#1081#1083#1072#1084#1080' DVD'
       TabOrder = 0
       OnChange = edInFileChange
     end
@@ -550,7 +538,7 @@ object Form1: TForm1
       Top = 40
       Width = 353
       Height = 21
-      Anchors = [akLeft, akTop, akRight]
+      Hint = #1048#1084#1103' '#1074#1099#1093#1086#1076#1085#1086#1075#1086' '#1092#1072#1081#1083#1072
       TabOrder = 1
       OnChange = edOutFileChange
     end
@@ -587,22 +575,14 @@ object Form1: TForm1
         #1057#1088#1077#1076#1085#1077#1077
         #1053#1080#1079#1082#1086#1077)
     end
-    object btOptional: TButton
-      Left = 376
-      Top = 88
-      Width = 115
-      Height = 21
-      Caption = #1044#1086#1087#1086#1083#1085#1080#1090#1077#1083#1100#1085#1086'...'
-      TabOrder = 4
-      Visible = False
-    end
     object edDVDTrack: TEdit
       Left = 312
       Top = 64
       Width = 33
       Height = 21
-      TabOrder = 5
-      Text = '1'
+      Hint = #1055#1086#1088#1103#1076#1082#1086#1074#1099#1081' '#1085#1086#1084#1077#1088' '#1092#1080#1083#1100#1084#1072' '#1085#1072' DVD '#1076#1080#1089#1082#1077
+      TabOrder = 4
+      Text = '0'
       Visible = False
       OnChange = edDVDTrackChange
     end
@@ -611,41 +591,27 @@ object Form1: TForm1
       Top = 64
       Width = 16
       Height = 21
-      Hint = #1055#1086#1088#1103#1076#1082#1086#1074#1099#1081' '#1085#1086#1084#1077#1088' '#1092#1080#1083#1100#1084#1072' '#1085#1072' DVD '#1076#1080#1089#1082#1077'.'
       Associate = edDVDTrack
-      Min = 1
       Max = 255
-      Position = 1
-      TabOrder = 6
+      TabOrder = 5
       Visible = False
     end
-  end
-  object btSettings: TButton
-    Left = 8
-    Top = 416
-    Width = 89
-    Height = 25
-    Anchors = [akLeft, akBottom]
-    Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080'...'
-    TabOrder = 1
-    Visible = False
   end
   object btExit: TButton
     Left = 416
     Top = 416
     Width = 91
     Height = 25
-    Anchors = [akRight, akBottom]
     Caption = #1042#1099#1093#1086#1076
-    TabOrder = 2
+    TabOrder = 1
     OnClick = btExitClick
   end
   object List: TListView
-    Left = 8
+    Left = 40
     Top = 8
     Width = 473
     Height = 223
-    Anchors = [akLeft, akTop, akRight, akBottom]
+    Hint = #1057#1087#1080#1089#1086#1082' '#1079#1072#1076#1072#1085#1080#1081' '#1076#1083#1103' '#1082#1086#1085#1074#1077#1088#1090#1077#1088#1072
     Columns = <
       item
         AutoSize = True
@@ -670,19 +636,18 @@ object Form1: TForm1
     ReadOnly = True
     RowSelect = True
     SmallImages = ImageList
-    TabOrder = 3
+    TabOrder = 2
     ViewStyle = vsReport
     OnSelectItem = ListSelectItem
   end
   object progress: TProgressBar
-    Left = 8
+    Left = 88
     Top = 240
     Width = 425
     Height = 22
-    Anchors = [akLeft, akRight, akBottom]
     Max = 1000
     Smooth = True
-    TabOrder = 4
+    TabOrder = 3
   end
   object ImageList: TImageList
     Left = 24

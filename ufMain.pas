@@ -1,6 +1,6 @@
 Unit ufMain;
 Interface
-
+// Âסו ןמההונזטגאולûו פמנלאעû|*.avi;*.rm;*.rmvb;*.mpg;*.mpeg;*.mp4;*.asf;*.wmv;*.mkv;*.dat;*.vob;*.flv|Ôאיכ AVI (*.avi)|*.avi|Ôאיכ Real (*.rm;*.rmvb)|*.rm;*.rmvb|Ôאיכ Mpeg (*.mpg;*.mpeg;*.mp4)|*.mpg;*.mpeg;*.mp4|Ôאיכ Asf (*.asf)|*.asf|Ôאיכ WMV (*.wmv)|*.wmv|Ôאיכ Mkv (*.mkv)|*.mkv|Ôאיכ VCD (*.dat)|*.dat|Ôאיכ DVD (*.vob)|*.vob|FlashVideo (*.flv;*.flac)|*.flv;*.flac|Âסו פאיכû (*.*)|*.*
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, XPMan, Buttons, StdCtrls, ComCtrls, ActnList, ImgList,
@@ -17,7 +17,6 @@ Const
 Type
   TForm1 = class(TForm)
     GroupBox: TGroupBox;
-    btSettings: TButton;
     btExit: TButton;
     Label1: TLabel;
     edInFile: TEdit;
@@ -27,7 +26,6 @@ Type
     cbSize: TComboBox;
     Label5: TLabel;
     cbAudioQuality: TComboBox;
-    btOptional: TButton;
     sbSelSource: TSpeedButton;
     sbSelDisk: TSpeedButton;
     sbSelDest: TSpeedButton;
@@ -276,6 +274,7 @@ Begin
     Dec(i);
   IF i <> -1 then
     List.Items[i].Selected := true;
+  RefreshButtons;
 End;
 
 Procedure TForm1.acPlaySourceExecute(Sender: TObject);
@@ -328,7 +327,7 @@ Begin
     else
       Path := ExtractFilePath(Params.szOutFile);
     GetSystemTime(st);
-    Params.nDVDTrack := 1;
+    Params.nDVDTrack := 0;
     Params.szInFile := S;
     Params.szOutFile := Path +
       ChangeFileExt('DVDdump_'+DateToStr(Date, DTFormat)+'_'+TimeToStr(Time, DTFormat), '.avi');
