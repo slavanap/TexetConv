@@ -1,0 +1,3 @@
+[submodule "AMVmuxer"]
+	path = AMVmuxer
+	url = https://github.com/tomvanbraeckel/amv-codec-tools
